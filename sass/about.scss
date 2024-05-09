@@ -1,0 +1,42 @@
+@import 'base';
+@import 'fonts';
+@import 'layouts';
+@import 'links';
+@import 'aside';
+@import 'responsive';
+
+.main{
+    width: 80%;
+    .tumbnail{
+        .name{
+            font-family: 'font-info';
+            font-size: $font_size_md;
+        }
+        p{
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: $font_size_sm;
+            padding-left: 50px;
+        }
+
+        ul li{
+            @include reset-lists;
+            color: $color_dark;
+            padding-left: 50px;
+            img{
+                height: 20px;
+                padding-right: 5px;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.dark .main .tumbnail{
+    color: $color_light_gray;
+    li span{
+        color: $color_light_gray;
+    }
+    h3{
+        color: $color_title_dark;
+    }
+}

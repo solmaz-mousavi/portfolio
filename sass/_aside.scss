@@ -1,0 +1,118 @@
+aside{
+    background-color: $color_aside;
+    padding-top: 50px;
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    backdrop-filter: blur(4px);
+    position: sticky;
+    top: 0;
+
+    .photo{
+        img{
+            width: 50%;
+            border-radius: 50%;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        }
+    }
+
+    .info{
+        padding: 20px 0px;
+        font-family: 'font-info';
+        font-weight: normal;
+        .name{
+            font-size: $font_size_md;
+        }
+        .details{
+            font-size: $font_size_sm;
+        }
+    }
+
+    .navbar{
+        transition: all 200ms ease-out;
+        li{
+            @include reset-lists;
+            transition: all 1s ease-in;
+            padding: 5px;
+            a{
+                @include reset-links;
+                color: $color_dark;
+                font-weight: lighter;
+                border-radius: 5px;
+                padding: 0px 10px;
+                &:hover{
+                    background-color: $color_medium_gray;
+                    color: $color_light;
+                }
+            }
+            .active{
+                background-color: $color_medium_gray;
+                color: $color_light;
+            }
+        }
+    }
+
+    .dark-light-slider{
+        width: 70px;
+        height: 30px;
+        padding: 5px;
+        margin: 30px 0px;
+        background: $color_medium_gray;
+        border-radius: 15px;
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        
+        div{
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            box-shadow: inset 4px 4px 4px rgb(255, 255, 255),
+                        inset -4px -4px 4px rgb(195 193 198 / 90%);
+        }
+    }
+    .menu-handler{
+        color: $color_dark;
+        transform: rotate(90deg);
+        margin-left: 90%;
+        cursor: pointer;
+        display: none;
+        transition: all 200ms ease-out;
+    }
+}
+
+.dark aside{
+    .info{
+        color: $color_light;
+    }
+    ul li{
+        a{
+        color: $color_light;
+            &:hover{
+                color: $color_dark;
+            }
+        }
+        .active{
+            background-color: $color_light;
+            color: $color_dark;
+        }
+    }
+
+    .dark-light-slider{
+        background-color: $color_light;
+        div{
+            background-color: $color_medium_gray;
+            box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.2), inset -4px -4px 4px rgb(195, 193, 198, 0.4);
+        }
+    }
+    .menu-handler{
+        color: $color_light;
+    }
+}

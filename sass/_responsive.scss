@@ -1,0 +1,87 @@
+@media screen and (max-width: 992px){
+    body{
+        flex-direction: column;
+        aside{
+            width: 100%;
+            height: auto;
+            flex-direction: row;
+            flex-wrap: wrap;
+            position: static;
+            padding: 20px 0px;
+            .photo{
+                width: 25%;
+                min-width: 80px;
+                position: fixed;
+                // top: 10px;
+                left: 0;
+            }
+            .info{
+                width: 25%;
+                margin-left: 20%;
+                text-align: left;
+            }
+            .navbar{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                margin-top: 0px;
+                margin-left: 20%;
+            }
+            .dark-light-slider{
+                position: fixed;
+                top: 0;
+                right: 0;
+                margin : 10px 20px;
+            }
+        }
+
+        .main{
+            width: 100%;
+            padding: 30px;
+            .title, .shadow{
+                font-size: 2.2rem;
+            }
+            .arrow-left, .arrow-right{
+                font-size: 5rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    body{
+        aside{
+            padding-bottom: 5px;
+            .photo{
+                position: static;
+                width: 50%;
+            }
+            .info{
+                width: 50%;
+                margin-left: 0px;
+            }
+            .navbar{
+                flex-direction: column;
+                opacity: 0;
+                height: 0px;
+            }
+            .menu-handler{
+                display: block;
+            }
+        }
+
+        .main{
+            position: relative;
+            .title, .shadow{
+                font-size: 1.5rem;
+            }
+            .arrow-left{
+                left:10px
+            }
+            .arrow-right{
+                right: 10px;
+            }
+        }
+    }
+}
