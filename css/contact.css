@@ -75,6 +75,9 @@ body .main .description {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.dark .description {
+  color: rgb(200, 200, 200);
+}
 
 aside {
   background-color: rgba(200, 200, 200, 0.3);
@@ -140,7 +143,7 @@ aside .dark-light-slider {
   position: relative;
   cursor: pointer;
 }
-aside .dark-light-slider div {
+aside .dark-light-slider #slider {
   width: 20px;
   height: 20px;
   background-color: #fff;
@@ -175,9 +178,10 @@ aside .menu-handler {
 .dark aside .dark-light-slider {
   background-color: rgb(240, 240, 240);
 }
-.dark aside .dark-light-slider div {
+.dark aside .dark-light-slider #slider {
   background-color: rgb(140, 140, 140);
   box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.2), inset -4px -4px 4px rgba(195, 193, 198, 0.4);
+  transform: translateX(40px);
 }
 .dark aside .menu-handler {
   color: rgb(240, 240, 240);
@@ -264,35 +268,59 @@ aside .menu-handler {
     right: 10px;
   }
 }
-.main {
-  width: 80%;
-  padding: 100px 30px;
+form input {
+  padding: 5px;
+  width: 200px;
+  margin-bottom: 10px;
 }
-.main h1 {
-  font-size: 4rem;
-  padding: 10px 50px;
+form textarea {
+  width: 100%;
+  padding: 5px;
 }
-.main a {
+form button {
+  width: 200px;
+  background-color: #386f6d;
+  border-radius: 5px;
+  color: rgb(240, 240, 240);
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+form .error {
+  color: red;
+}
+
+.dark form .error {
+  color: yellow;
+}
+
+.main .info {
+  margin-left: 20px;
+}
+.main .info a {
   text-decoration: none;
   color: #282828;
 }
-.main i {
-  padding: 0px 10px;
-  color: #386f6d;
+.main .info i {
+  padding: 0px 5px;
+  color: #282828;
 }
-.main .social {
-  padding: 20px 50px;
+.main .info .social {
+  padding: 20px 0px;
 }
-.main .social i {
-  font-size: 2rem;
+.main .info .social i {
+  font-size: 1.6rem;
+}
+.main h3 {
+  margin-left: 20px;
 }
 
-.dark {
-  background-color: #282828;
+.dark .main .info a {
+  color: rgb(200, 200, 200);
 }
-.dark .main a, .dark .main h1 {
-  color: rgb(240, 240, 240);
+.dark .main .info b, .dark .main .info i {
+  color: rgb(200, 202, 144);
 }
-.dark .main i {
-  color: #86bdbb;
+.dark .main h3 {
+  color: rgb(200, 200, 200);
 }/*# sourceMappingURL=contact.css.map */

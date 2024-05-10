@@ -32,9 +32,8 @@
 }
 
 .dark .main .tumbnail{
+    p, span{
     color: $color_light_gray;
-    li span{
-        color: $color_light_gray;
     }
     h3{
         color: $color_title_dark;

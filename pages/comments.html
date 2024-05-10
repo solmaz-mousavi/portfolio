@@ -38,13 +38,13 @@
 
         <div class="comment-container"></div>
 
-        <form action="#" class="tumbnail" name="comment-form">
+        <form action="#" class="tumbnail" name="comment-form" novalidate>
             <div>
-                <input name="name" id="name" type="text" placeholder="name">
+                <input class="input" name="name" id="name" type="text" placeholder="name" data-validation="isRequired" data-label="name">
             </div>
-            <textarea name="message" id="message" rows="5"></textarea>
+            <textarea class="input" name="message" id="message" rows="5" data-validation="isRequired" data-label="comment" placeholder="your comment"></textarea>
             <p class="error description"></p>
-            <button type="submit" onclick="submitHandler(event)">send</button>
+            <button type="submit">send</button>
 
         </form>
 
@@ -52,5 +52,6 @@
     
     <script src="../js/aside.js"></script>
     <script src="../js/comments.js"></script>
+    <script src="../js/form-validation.js"></script>
 </body>
 </html>

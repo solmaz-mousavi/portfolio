@@ -4,43 +4,24 @@
 @import 'links';
 @import 'aside';
 @import 'responsive';
-
+@import 'form';
 
 .main{
     i{
         padding: 0px 10px;
     }
-
-    form{
-        input{
-            padding: 5px;
-            width: 200px;
-            margin-bottom: 10px;
-        }
-        textarea{
-            width: 100%;
-            padding: 5px;
-        }
-        button{
-            width: 200px;
-            background-color: $color_turquoise;
-            border-radius: 5px;
-            color: $color_light;
-            border: none;
-            padding: 5px;
-            cursor: pointer;
-        }
-        .error{
-            color: red;
-        }
-    }
 }
 
-.dark .tumbnail{
-    i, span{
-        color: $color_title_dark;
+.dark{
+    .comment-container{
+        i, span{
+            color: $color_title_dark;
+        }
+        p{
+            color: $color_light_gray;
+        }
     }
-    p{
-        color: $color_light_gray;
+    form .error{
+        color: yellow;
     }
 }

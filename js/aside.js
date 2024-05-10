@@ -2,21 +2,21 @@ const darkLightSlider = document.querySelector('.dark-light-slider');
 const slider = document.querySelector('#slider');
 const menuHandler = document.querySelector('.menu-handler');
 const navbar = document.querySelector('.navbar');
-
-let lightMode = true;
 let menuClosed = true;
+let mode = localStorage.getItem('mode') || 'light';
+console.log('avalin bar' + mode);
 
-darkLightSlider.addEventListener('click', function(){
-    if(lightMode){
-        document.body.classList.add('dark');
-        slider.style.transform = 'translateX(40px)'
-        lightMode = false;
+function darkModeHandler(mode){
+    if(mode === 'dark'){
+        document.body.className = 'dark';
+        console.log("darkkkkkkk");
     } else {
-        document.body.classList.remove('dark');
-        slider.style.transform = 'translateX(0px)'
-        lightMode = true;
+        document.body.className = '';
+        console.log('ligttttttttttttt');
     }
-})
+}
+
+darkModeHandler(mode);
 
 menuHandler.addEventListener('click', function(){
     if(menuClosed){
@@ -32,6 +32,9 @@ menuHandler.addEventListener('click', function(){
     }
 })
 
-
-
-
+darkLightSlider.addEventListener('click', function(){
+    mode = (mode === 'light') ? 'dark' : 'light';
+    localStorage.setItem('mode' , mode);
+    console.log('bere local: ' + mode);
+    darkModeHandler(mode);
+})

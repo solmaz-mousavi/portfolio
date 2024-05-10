@@ -75,6 +75,9 @@ body .main .description {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.dark .description {
+  color: rgb(200, 200, 200);
+}
 
 aside {
   background-color: rgba(200, 200, 200, 0.3);
@@ -140,7 +143,7 @@ aside .dark-light-slider {
   position: relative;
   cursor: pointer;
 }
-aside .dark-light-slider div {
+aside .dark-light-slider #slider {
   width: 20px;
   height: 20px;
   background-color: #fff;
@@ -175,9 +178,10 @@ aside .menu-handler {
 .dark aside .dark-light-slider {
   background-color: rgb(240, 240, 240);
 }
-.dark aside .dark-light-slider div {
+.dark aside .dark-light-slider #slider {
   background-color: rgb(140, 140, 140);
   box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.2), inset -4px -4px 4px rgba(195, 193, 198, 0.4);
+  transform: translateX(40px);
 }
 .dark aside .menu-handler {
   color: rgb(240, 240, 240);
@@ -264,19 +268,16 @@ aside .menu-handler {
     right: 10px;
   }
 }
-.main i {
-  padding: 0px 10px;
-}
-.main form input {
+form input {
   padding: 5px;
   width: 200px;
   margin-bottom: 10px;
 }
-.main form textarea {
+form textarea {
   width: 100%;
   padding: 5px;
 }
-.main form button {
+form button {
   width: 200px;
   background-color: #386f6d;
   border-radius: 5px;
@@ -285,13 +286,24 @@ aside .menu-handler {
   padding: 5px;
   cursor: pointer;
 }
-.main form .error {
+form .error {
   color: red;
 }
 
-.dark .tumbnail i, .dark .tumbnail span {
+.dark form .error {
+  color: yellow;
+}
+
+.main i {
+  padding: 0px 10px;
+}
+
+.dark .comment-container i, .dark .comment-container span {
   color: rgb(200, 202, 144);
 }
-.dark .tumbnail p {
+.dark .comment-container p {
   color: rgb(200, 200, 200);
+}
+.dark form .error {
+  color: yellow;
 }/*# sourceMappingURL=comments.css.map */

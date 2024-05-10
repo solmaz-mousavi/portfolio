@@ -75,6 +75,9 @@ body .main .description {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.dark .description {
+  color: rgb(200, 200, 200);
+}
 
 aside {
   background-color: rgba(200, 200, 200, 0.3);
@@ -140,7 +143,7 @@ aside .dark-light-slider {
   position: relative;
   cursor: pointer;
 }
-aside .dark-light-slider div {
+aside .dark-light-slider #slider {
   width: 20px;
   height: 20px;
   background-color: #fff;
@@ -175,9 +178,10 @@ aside .menu-handler {
 .dark aside .dark-light-slider {
   background-color: rgb(240, 240, 240);
 }
-.dark aside .dark-light-slider div {
+.dark aside .dark-light-slider #slider {
   background-color: rgb(140, 140, 140);
   box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.2), inset -4px -4px 4px rgba(195, 193, 198, 0.4);
+  transform: translateX(40px);
 }
 .dark aside .menu-handler {
   color: rgb(240, 240, 240);
@@ -288,10 +292,7 @@ aside .menu-handler {
   vertical-align: middle;
 }
 
-.dark .main .tumbnail {
-  color: rgb(200, 200, 200);
-}
-.dark .main .tumbnail li span {
+.dark .main .tumbnail p, .dark .main .tumbnail span {
   color: rgb(200, 200, 200);
 }
 .dark .main .tumbnail h3 {

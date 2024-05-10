@@ -1,0 +1,31 @@
+form{
+    input{
+        padding: 5px;
+        width: 200px;
+        margin-bottom: 10px;
+    }
+    textarea{
+        width: 100%;
+        padding: 5px;
+    }
+    button{
+        width: 200px;
+        background-color: $color_turquoise;
+        border-radius: 5px;
+        color: $color_light;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .error{
+        color: red;
+    }
+}
+
+.dark{
+    form{
+        .error{
+            color: yellow;
+        }
+    }
+}

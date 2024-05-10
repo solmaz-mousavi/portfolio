@@ -1,4 +1,3 @@
-"use strict"
 const arrowLeft = document.querySelector('.arrow-left');
 const arrowRight = document.querySelector('.arrow-right');
 const sliderElem = document.querySelector('.slider-img');
@@ -22,6 +21,8 @@ function sliderHandler(sliderImages) {
 
 
 window.addEventListener('load', () => {
+
+
     fetch('../json/slider.json', {method:'GET'})
         .then(res => res.json())
         .then(data => {

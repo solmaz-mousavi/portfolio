@@ -66,7 +66,7 @@ aside{
         position: relative;
         cursor: pointer;
         
-        div{
+        #slider{
             width: 20px;
             height: 20px;
             background-color: #fff;
@@ -107,9 +107,10 @@ aside{
 
     .dark-light-slider{
         background-color: $color_light;
-        div{
+        #slider{
             background-color: $color_medium_gray;
             box-shadow: inset 4px 4px 4px rgba(255, 255, 255, 0.2), inset -4px -4px 4px rgb(195, 193, 198, 0.4);
+            transform: translateX(40px);
         }
     }
     .menu-handler{
