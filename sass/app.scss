@@ -4,42 +4,14 @@
 @import 'links';
 @import 'aside';
 @import 'responsive';
+@import 'slider';
 
 .main{
-    .slider-container{
-        position: relative;
-        align-items: center;
-    }
-
     .slider-img{
         height: calc(100vh - 220px);
         background-image: url("../images/slider/slider-1.png");
-        background-repeat: no-repeat;
-        background-size:contain;
-        background-position: center;
-        transition: all 1000ms ease-out;
     }
-
     .arrow-right, .arrow-left{
-        position: absolute;
-        color: $color_gray;
-        font-size: 7rem;
-        cursor: pointer;
         top: calc(50vh - 220px);
-
-    }
-
-    .arrow-right{
-        right: 20px;
-    }
-    .arrow-left{
-        left: 20px;
     }
 }
-
-.dark{
-        .arrow-right, .arrow-left{
-            color: $color_light_gray;
-        }
-    }
-

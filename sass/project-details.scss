@@ -1,0 +1,64 @@
+@import 'base';
+@import 'fonts';
+@import 'layouts';
+@import 'links';
+@import 'aside';
+@import 'responsive';
+@import 'slider';
+
+.main{
+    h3{
+        margin-left: 20px;
+    }
+    .skills{
+        margin-left: 40px;
+    }
+    
+    .slider-img{
+        height: 450px;
+    }
+    .arrow-right, .arrow-left{
+        top: 200px;
+    }
+    .project-details{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        .project-tumbnail{
+            text-align: center;
+            
+            
+            img{
+                width: 120px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            p{
+                width: 120px;
+            }
+            .active{
+                border: 2px solid #8c1b1b;
+            }
+
+        }
+    }
+}
+
+
+// project-container
+// project-slider
+// arrow-left
+// arrow-right
+// slider-img
+
+
+
+
+// title
+// shadow
+// project-container
+// details
+// img
+// p

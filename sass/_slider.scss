@@ -1,0 +1,42 @@
+.main{
+    .slider-container{
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        .slider-img{
+            background-repeat: no-repeat;
+            background-size:contain;
+            background-position: center;
+            transition: all 1000ms ease-out;
+            // border-radius: 10px;
+        }
+    
+        .arrow-right, .arrow-left{
+            position: absolute;
+            color: $color_gray;
+            font-size: 7rem;
+            cursor: pointer;
+    
+        }
+        .arrow-right{
+            right: 20px;
+        }
+        .arrow-left{
+            left: 20px;
+        }
+        h3{
+            padding: 5px;
+        }
+        p{
+            padding: 0px 40px;
+        }
+    }
+}
+
+.dark{
+        .arrow-right, .arrow-left{
+            color: $color_light_gray;
+        }
+    }

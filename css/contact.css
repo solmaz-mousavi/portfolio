@@ -267,6 +267,10 @@ aside .menu-handler {
   body .main .arrow-right {
     right: 10px;
   }
+  body .main .projects-container .project {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 form input {
   padding: 5px;

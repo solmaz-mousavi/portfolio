@@ -82,6 +82,12 @@
             .arrow-right{
                 right: 10px;
             }
+            .projects-container{
+                .project{
+                    flex-direction: column;
+                    text-align: center;
+                }
+            }
         }
     }
 }

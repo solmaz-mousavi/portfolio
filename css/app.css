@@ -267,33 +267,50 @@ aside .menu-handler {
   body .main .arrow-right {
     right: 10px;
   }
+  body .main .projects-container .project {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 .main .slider-container {
   position: relative;
   align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-.main .slider-img {
-  height: calc(100vh - 220px);
-  background-image: url("../images/slider/slider-1.png");
+.main .slider-container .slider-img {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   transition: all 1000ms ease-out;
 }
-.main .arrow-right, .main .arrow-left {
+.main .slider-container .arrow-right, .main .slider-container .arrow-left {
   position: absolute;
   color: rgb(90, 90, 90);
   font-size: 7rem;
   cursor: pointer;
-  top: calc(50vh - 220px);
 }
-.main .arrow-right {
+.main .slider-container .arrow-right {
   right: 20px;
 }
-.main .arrow-left {
+.main .slider-container .arrow-left {
   left: 20px;
+}
+.main .slider-container h3 {
+  padding: 5px;
+}
+.main .slider-container p {
+  padding: 0px 40px;
 }
 
 .dark .arrow-right, .dark .arrow-left {
   color: rgb(200, 200, 200);
+}
+
+.main .slider-img {
+  height: calc(100vh - 220px);
+  background-image: url("../images/slider/slider-1.png");
+}
+.main .arrow-right, .main .arrow-left {
+  top: calc(50vh - 220px);
 }/*# sourceMappingURL=app.css.map */
