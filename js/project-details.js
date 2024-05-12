@@ -1,12 +1,17 @@
-const title = document.querySelector('.title');
+const title = document.querySelector('.page-title');
 const shadow = document.querySelector('.shadow');
 const skills = document.querySelector('.skills');
-const sliderImg = document.querySelector('.slider-img');
-const sliderTitle = document.querySelector('.slider-container h3');
-const sliderDescription = document.querySelector('.slider-container p');
-const tumbnailContainer = document.querySelector('.project-details');
-const arrowLeft = document.querySelector('.arrow-left');
+
 const arrowRight = document.querySelector('.arrow-right');
+const arrowLeft = document.querySelector('.arrow-left');
+const sliderImg = document.querySelector('.slider-img img');
+const sliderTitle = document.querySelector('.slider-title');
+const sliderDescription = document.querySelector('.slider-description');
+
+const projectContainer = document.querySelector('.project-details');
+// const detailImg = document.querySelector('.detail-img');
+// const detailTitle = document.querySelector('.detail-title');
+
 const projectId = new URLSearchParams(window.location.search).get('projectId');
 let index = 0;
 
@@ -17,49 +22,63 @@ function titleHandler(project){
 }
 
 function sliderHandler(project, index){
-    sliderImg.style.backgroundImage = `url(${project.details[index].image})`;
+    sliderImg.setAttribute('src', project.details[index].image)
     sliderTitle.innerHTML = project.details[index].title;
     sliderDescription.innerHTML = project.details[index].description;
 }
 
-function projectsHandler(project, indexId){
+function projectsHandler(project){
     const projectDetails = project.details;
+    // console.log(projectDetails);
     projectDetails.forEach(detail => {
+        console.log(detail);
 
-        const projectTumbnail = document.createElement('div');
-        projectTumbnail.className = 'project-tumbnail';
+        const detailContainer = document.createElement('div');
+        detailContainer.className = 'detail-container';
 
-        const tumbnailImg = document.createElement('img');
-        tumbnailImg.setAttribute('src', detail.image);
-        tumbnailImg.setAttribute('data-index', detail.index);
-        if (detail.index == indexId) {
-            tumbnailImg.className = 'active';
-        }
-
-        const tumbnailTitle = document.createElement('p');
-        tumbnailTitle.innerHTML = detail.title;
-
-        projectTumbnail.append(tumbnailImg, tumbnailTitle);
-        tumbnailContainer.append(projectTumbnail);
+        const detailImg = document.createElement('img');
+        detailImg.className = 'detail-img';
+        detailImg.setAttribute('src', detail.image);
+        detailImg.setAttribute('data-index', detail.index);
+        
+        const detailTitle = document.createElement('p');
+        detailTitle.className = 'description detail-title';
+        detailTitle.innerHTML = detail.title;
+        
+        // console.log(detailContainer);
+        // console.log(detailImg);
+        // console.log(detailTitle);
+        // console.log(projectDetails);
+        detailContainer.append(detailImg, detailTitle);
+        projectContainer.append(detailContainer);
+        
+        // console.log(detailTitle);
+        // descriptionContainer.append(tumbnailTitle);
     });
 }
 
 function titleChanger(project){
-    tumbnailContainer.addEventListener('click', function(event){
+    projectContainer.addEventListener('click', function(event){
         index = Number(event.target.dataset.index);
         sliderHandler(project, index)
-    })
+    });
 }
 
 function sliderSwitchHandler(project){
     arrowLeft.addEventListener('click', function(){
-        index = (index == 0) ? tumbnailContainer.childElementCount-1 : index - 1 ;
+        index = (index == 0) ? projectContainer.childElementCount-1 : index - 1 ;
         sliderHandler(project, index)
-    })
+    });
     arrowRight.addEventListener('click', function(){
-        index = (index > tumbnailContainer.childElementCount-2) ? 0 : index + 1 ;
+        index = (index > projectContainer.childElementCount-2) ? 0 : index + 1 ;
+        sliderHandler(project, index)
+    });
+    sliderImg.addEventListener('click', function(){
+        index = (index > projectContainer.childElementCount-2) ? 0 : index + 1 ;
+        console.log(projectContainer);
         sliderHandler(project, index)
     })
+
 }
 
 window.addEventListener('load', () => {
@@ -67,9 +86,10 @@ window.addEventListener('load', () => {
         .then(res => res.json())
         .then(data => {
             var project = data.projects[projectId-1];
+            // console.log(project);
             titleHandler(project);
             sliderHandler(project, index);
-            projectsHandler(project, index);
+            projectsHandler(project);
             titleChanger(project);
             sliderSwitchHandler(project);
         })

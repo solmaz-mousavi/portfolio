@@ -1,0 +1,118 @@
+.shape1{
+    width: 500px;
+    height: 500px;
+    background-color: rgb(201, 127, 215, 0.2);
+    border-radius: 100px;
+    position: fixed;
+    left: -140px;
+    top: -350px;
+    transform: rotate(45deg);
+    backdrop-filter: blur(10px);
+    z-index: -2;
+}
+
+.shape2, .shape3, .shape4, .shape5{
+    border-radius: 100%;
+    position: fixed;
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+.shape2{
+    width: 150px;
+    height: 150px;
+    background-color: rgb(142, 207, 235, 0.2);
+    left: 160px;
+    top: 80px;
+}
+.shape3{
+    width: 300px;
+    height: 300px;
+    background-color: rgb(107, 114, 192, 0.2);
+    left: -185px;
+    top: 190px;
+}
+.shape4{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(173, 236, 215, 0.2);
+    left: 115px;
+    top: 255px;
+}
+.shape5{
+    width: 130px;
+    height: 130px;
+    background-color: rgb(173, 236, 215, 0.2);
+    left: 30px;
+    top: 400px;
+}
+
+
+@media screen and (max-width: 992px){
+    .shape1{
+        width: 375px;
+        height: 375px;
+        border-radius: 75px;
+        left: -105px;
+        top: -262px;
+    }
+    
+    .shape2{
+        width: 112px;
+        height: 112px;
+        left: 120px;
+        top: 60px;
+    }
+    .shape3{
+        width: 225px;
+        height: 225px;
+        left: -139px;
+        top: 142px;
+    }
+    .shape4{
+        width: 37px;
+        height: 37px;
+        left: 86px;
+        top: 191px;
+    }
+    .shape5{
+        width: 97px;
+        height: 97px;
+        left: 22px;
+        top: 300px;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .shape1{
+        width: 250px;
+        height: 250px;
+        border-radius: 50px;
+        left: -70px;
+        top: -175px;
+    }
+    
+    .shape2{
+        width: 75px;
+        height: 75px;
+        left: 80px;
+        top: 40px;
+    }
+    .shape3{
+        width: 150px;
+        height: 150px;
+        left: -90px;
+        top: 85px;
+    }
+    .shape4{
+        width: 25px;
+        height: 25px;
+        left: 57px;
+        top: 127px;
+    }
+    .shape5{
+        width: 65px;
+        height: 65px;
+        left: 15px;
+        top: 200px;
+    }
+}

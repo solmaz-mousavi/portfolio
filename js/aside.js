@@ -23,11 +23,13 @@ menuHandler.addEventListener('click', function(){
         menuHandler.style.transform = 'rotate(270deg)';
         navbar.style.height = 'auto';
         navbar.style.opacity = '1';
+        navbar.style.transform = 'translateY(0px)';
         menuClosed = false;
     } else{
         menuHandler.style.transform = 'rotate(90deg)';
         navbar.style.height = '0px';
         navbar.style.opacity = '0';
+        navbar.style.transform = 'translateY(-40px)';
         menuClosed = true;
     }
 })

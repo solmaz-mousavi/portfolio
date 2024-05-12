@@ -8,10 +8,12 @@
 
 @mixin flex-row{
     display: flex;
+    flex-direction: row;
 }
 
 @mixin flex-center{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -22,7 +24,6 @@
     width: 50%;
     margin: 0 auto;
     text-align: center;
-    font-family: "secondary-font";
 }
 
 @mixin tumbnail{
@@ -40,27 +41,28 @@
 
 body{
     @include flex-row;
-    font-family: 'font-primary';
+    font-family: 'font-primary', 'font-secondary', tahoma;
     background-image: url('../images/body.png');
     background-repeat: no-repeat;
     background-size: contain;
-    background-position: left;
+    background-position: right;
     background-attachment: fixed;
     
     .main{
         width: 80%;
         padding: 50px 20px;
         
-        .shadow, .title{
-            font-family: 'font-title';
-            font-size: 3rem;
+        .shadow, .page-title{
+            font-family: 'font-title', 'font-primary', 'font-secondary', tahoma;
+            font-size: 3.5rem;
             color: $color_dark;
-            text-align: left;
+            text-align: right;
+            height: 70px;
         }
         
         .shadow{
             transform: rotateX(180deg);
-            background: linear-gradient(rgba(255, 255, 255, 0), rgba(90, 90, 90, 0.62));
+            background: linear-gradient(rgba(255, 255, 255, 0), rgba(100, 100, 100, 0.2));
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -71,10 +73,14 @@ body{
             padding: 10px 20px 20px 10px;
             box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
         }
+        .title{
+            font-size: $font_size_md;
+        }
         .description{
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: $font_size_sm;
             color: $color_gray;
+            text-align: justify;
+            padding-right: 20px;
+            padding-left: 20px;
         }
     }
 }
@@ -83,17 +89,23 @@ body{
 .dark{
     background-color: $color_dark;
     .main{
-        .title{
+        .page-title{
             color: $color_light;
         }
+        
         .shadow{
-            background: linear-gradient( rgba(255, 255, 255, 0), rgba(214, 214, 214, 0.62));
+            background: linear-gradient( rgba(255, 255, 255, 0), rgba(132, 132, 132, 0.205));
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-    }
-    .description{
-        color: $color_light_gray;
+        .title{
+            color: $color_title_dark;
+        }
+        .description{
+            color: $color_light_gray;
+            text-align: justify;
+
+        }
     }
 }
 

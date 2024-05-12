@@ -1,32 +1,34 @@
 @media screen and (max-width: 992px){
     body{
         flex-direction: column;
+        // aside responsive 
         aside{
             width: 100%;
             height: auto;
             flex-direction: row;
             flex-wrap: wrap;
             position: static;
+            justify-content: space-between;
             padding: 20px 0px;
             .photo{
-                width: 25%;
-                min-width: 80px;
-                position: fixed;
-                // top: 10px;
-                left: 0;
+                min-width: 100px;
+                margin-right: 100px;
+                img{
+                    width: 100px;
+                }
             }
             .info{
-                width: 25%;
-                margin-left: 20%;
-                text-align: left;
+                width: 150px;
+                margin-left: 100px;
+                text-align: center;
             }
             .navbar{
                 width: 100%;
                 display: flex;
                 flex-direction: row;
-                justify-content: start;
+                justify-content: center;
                 margin-top: 0px;
-                margin-left: 20%;
+                // margin-left: 20%;
             }
             .dark-light-slider{
                 position: fixed;
@@ -35,57 +37,105 @@
                 margin : 10px 20px;
             }
         }
-
+        // general:
         .main{
             width: 100%;
             padding: 30px;
-            .title, .shadow{
+            .page-title, .shadow{
                 font-size: 2.2rem;
+                height: 45px;
             }
-            .arrow-left, .arrow-right{
-                font-size: 5rem;
-            }
+
+            
+            
+            // comments page:
+
+            // contact page:
+
+
+            // porfolio page:
+
+            // project detail page:
+
+
+
+
+
+
+
+
+            
         }
     }
 }
 
 @media screen and (max-width: 576px){
     body{
+        // aside responsive code:
         aside{
             padding-bottom: 5px;
+            padding-top: 50px;
             .photo{
-                position: static;
-                width: 50%;
+                width: 50px;
+                margin-right: 50px;
             }
             .info{
-                width: 50%;
-                margin-left: 0px;
+                margin-left: 20px;
             }
             .navbar{
                 flex-direction: column;
                 opacity: 0;
                 height: 0px;
+                transform: translateY(-40px);
             }
             .menu-handler{
                 display: block;
+
             }
         }
-
+        // general:
         .main{
             position: relative;
-            .title, .shadow{
+            padding: 10px;
+            .page-title, .shadow{
                 font-size: 1.5rem;
+                height: 30px;
             }
-            .arrow-left{
-                left:10px
+            .tumbnail{
+                padding: 5px 10px 10px 5px;
             }
-            .arrow-right{
-                right: 10px;
+            .description{
+                padding: 0px 5px;
             }
+
+            
+            // about page:
+
+
+            // comments page:
+
+            // contact page:
+
+
+            // porfolio page:
+
+            // project detail page:
+
+
+
+
+
+
+
+
+
+
+
+            
             .projects-container{
-                .project{
-                    flex-direction: column;
-                    text-align: center;
+                .project-tumbnail{
+                    // flex-direction: column;
+                    // text-align: center;
                 }
             }
         }

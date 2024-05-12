@@ -4,9 +4,10 @@ function skillHandler(skills){
     skills.forEach(skill => {
         const skillElem = document.createElement('li');
 
+        const skillTitle = document.createElement('h3');
+        skillTitle.className = 'title';
         const skillImg = document.createElement('img');
         skillImg.setAttribute('src', skill.image);
-
         const skillname = document.createElement('span');
         skillname.innerText = skill.name;
         
@@ -14,10 +15,8 @@ function skillHandler(skills){
         skillDescription.classList.add('description');
         skillDescription.innerText = ' - ' + skill.description;
 
-        skillElem.appendChild(skillImg);
-        skillElem.appendChild(skillname);
-        skillElem.appendChild(skillDescription);
-
+        skillTitle.append(skillImg, skillname)
+        skillElem.append(skillTitle, skillDescription);
         skillContainer.appendChild(skillElem);
     });
 }

@@ -4,21 +4,27 @@ function projectsHandler(projects){
     projects.forEach(project => {
 
         const projectElem = document.createElement('div');
-        projectElem.className = 'project tumbnail';
+        projectElem.className = 'project-tumbnail';
 
         const imagecontainer = document.createElement('div');
         imagecontainer.className = 'project-img';
+
         const imageElem = document.createElement('img');
         imageElem.setAttribute('src', project.details[0].image);
         
-        const infocontainer = document.createElement('div');
-        infocontainer.className = 'project-info';
+        const titleContainer = document.createElement('div');
+        titleContainer.className = 'project-title';
         
         const titleElem = document.createElement('h3');
+        titleElem.className = 'title';
         titleElem.innerText = project.name;
         
         const skillsElem = document.createElement('p');
-        skillsElem.innerText = 'contains: ' + [...project.skills];
+        skillsElem.className = 'title';
+        skillsElem.innerText = 'شامل مهارتهای نرم افزاری: ' + [...project.skills];
+
+        const infocontainer = document.createElement('div');
+        infocontainer.className = 'project-info';
         
         const descriptionElem = document.createElement('p');
         descriptionElem.className = 'description';
@@ -26,12 +32,12 @@ function projectsHandler(projects){
         
         const linkElem = document.createElement('a');
         linkElem.setAttribute('href', `../pages/project-details.html?projectId=${project.id}`);
-        linkElem.innerText = 'more details';
+        linkElem.innerText = 'جزئیات بیشتر ';
         
         imagecontainer.appendChild(imageElem);
-        infocontainer.append(titleElem, skillsElem, descriptionElem, linkElem);
-        projectElem.append(imagecontainer, infocontainer)
-        console.log(projectElem);
+        titleContainer.append(titleElem, skillsElem);
+        infocontainer.append(descriptionElem, linkElem);
+        projectElem.append(imagecontainer, titleContainer, infocontainer);
         projectsContainer.appendChild(projectElem);
 
 

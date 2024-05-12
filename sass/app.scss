@@ -1,17 +1,36 @@
-@import 'base';
+@import 'variables';
 @import 'fonts';
 @import 'layouts';
 @import 'links';
 @import 'aside';
 @import 'responsive';
 @import 'slider';
+@import 'shape';
 
 .main{
     .slider-img{
-        height: calc(100vh - 220px);
-        background-image: url("../images/slider/slider-1.png");
+        
+        // height: 40vw;
+        // background-image: url("../images/slider/slider-1.png");
     }
     .arrow-right, .arrow-left{
-        top: calc(50vh - 220px);
+        // top: calc(20vw - 94px);
+    }
+}
+
+@media screen and (max-width: 992px){
+    body .main{
+        .arrow-left, .arrow-right{
+            font-size: 5rem;
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    body .main{
+
+        .arrow-left, .arrow-right{
+            display: none;
+        }
     }
 }

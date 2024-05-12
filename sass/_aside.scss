@@ -10,7 +10,6 @@ aside{
     backdrop-filter: blur(4px);
     position: sticky;
     top: 0;
-
     .photo{
         img{
             width: 50%;
@@ -18,10 +17,8 @@ aside{
             box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
         }
     }
-
     .info{
         padding: 20px 0px;
-        font-family: 'font-info';
         font-weight: normal;
         .name{
             font-size: $font_size_md;
@@ -30,12 +27,11 @@ aside{
             font-size: $font_size_sm;
         }
     }
-
     .navbar{
         transition: all 200ms ease-out;
         li{
             @include reset-lists;
-            transition: all 1s ease-in;
+            transition: all 0.3s ease-in;
             padding: 5px;
             a{
                 @include reset-links;
@@ -54,7 +50,6 @@ aside{
             }
         }
     }
-
     .dark-light-slider{
         width: 70px;
         height: 30px;
@@ -65,7 +60,6 @@ aside{
         text-align: center;
         position: relative;
         cursor: pointer;
-        
         #slider{
             width: 20px;
             height: 20px;
@@ -81,7 +75,7 @@ aside{
     .menu-handler{
         color: $color_dark;
         transform: rotate(90deg);
-        margin-left: 90%;
+        margin-right: 10%;
         cursor: pointer;
         display: none;
         transition: all 200ms ease-out;

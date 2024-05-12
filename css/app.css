@@ -1,24 +1,22 @@
 @font-face {
+  font-family: "font_title";
+  src: url("../fonts/farsi-fonts/SandalRegular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
   font-family: "font-primary";
-  src: url("../fonts/farsi-fonts/iran-yekan-500.eot");
-  src: url("../fonts/farsi-fonts/iran-yekan-500.eot?#iefix") format("embedded-opentype"), url("../fonts/farsi-fonts/iran-yekan-500.woff2") format("woff2"), url("../fonts/farsi-fonts/iran-yekan-500.woff") format("woff"), url("../fonts/farsi-fonts/iran-yekan-500.ttf") format("truetype");
-  font-weight: 500;
+  src: local("iran-yekan"), local("iran yekan"), url("../fonts/farsi-fonts/iran-yekan-500.ttf") format("truetype");
+  font-weight: normal;
 }
 @font-face {
   font-family: "font-secondary";
-  src: url("../fonts/farsi-fonts/pinar-700.eot");
-  src: url("../fonts/farsi-fonts/pinar-700.eot?#iefix") format("embedded-opentype"), url("../fonts/farsi-fonts/pinar-700.woff2") format("woff2"), url("../fonts/farsi-fonts/pinar-700.woff") format("woff"), url("../fonts/farsi-fonts/pinar-700.ttf") format("truetype");
-  font-weight: 700;
+  src: local("segoeui"), local("segoeui-regular"), url("../fonts/farsi-fonts/segoeui.ttf") format("truetype");
+  font-weight: normal;
 }
 @font-face {
-  font-family: "font-title";
-  src: url("../fonts/Mayonaise-Condensed.otf") format("opentype");
-  font-weight: 500;
-}
-@font-face {
-  font-family: "font-info";
-  src: url("../fonts/GonziCondensedPERSONALUSE-Light.otf") format("opentype");
-  font-weight: 500;
+  font-family: "font-description";
+  src: url("../fonts/farsi-fonts/IRDastNevis.ttf") format("truetype");
+  font-weight: normal;
 }
 * {
   margin: 0;
@@ -28,26 +26,28 @@
 
 body {
   display: flex;
-  font-family: "font-primary";
+  flex-direction: row;
+  font-family: "font-primary", "font-secondary", tahoma;
   background-image: url("../images/body.png");
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: left;
+  background-position: right;
   background-attachment: fixed;
 }
 body .main {
   width: 80%;
   padding: 50px 20px;
 }
-body .main .shadow, body .main .title {
-  font-family: "font-title";
-  font-size: 3rem;
+body .main .shadow, body .main .page-title {
+  font-family: "font-title", "font-primary", "font-secondary", tahoma;
+  font-size: 3.5rem;
   color: #282828;
-  text-align: left;
+  text-align: right;
+  height: 70px;
 }
 body .main .shadow {
   transform: rotateX(180deg);
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(90, 90, 90, 0.62));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(100, 100, 100, 0.2));
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -58,25 +58,33 @@ body .main .tumbnail {
   padding: 10px 20px 20px 10px;
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
+body .main .title {
+  font-size: 1.2rem;
+}
 body .main .description {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 0.8rem;
   color: rgb(90, 90, 90);
+  text-align: justify;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 .dark {
   background-color: #282828;
 }
-.dark .main .title {
+.dark .main .page-title {
   color: rgb(240, 240, 240);
 }
 .dark .main .shadow {
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(214, 214, 214, 0.62));
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(132, 132, 132, 0.205));
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.dark .description {
+.dark .main .title {
+  color: rgb(200, 202, 144);
+}
+.dark .main .description {
   color: rgb(200, 200, 200);
+  text-align: justify;
 }
 
 aside {
@@ -99,7 +107,6 @@ aside .photo img {
 }
 aside .info {
   padding: 20px 0px;
-  font-family: "font-info";
   font-weight: normal;
 }
 aside .info .name {
@@ -114,7 +121,7 @@ aside .navbar {
 aside .navbar li {
   text-decoration: none;
   list-style: none;
-  transition: all 1s ease-in;
+  transition: all 0.3s ease-in;
   padding: 5px;
 }
 aside .navbar li a {
@@ -156,7 +163,7 @@ aside .dark-light-slider #slider {
 aside .menu-handler {
   color: #282828;
   transform: rotate(90deg);
-  margin-left: 90%;
+  margin-right: 10%;
   cursor: pointer;
   display: none;
   transition: all 200ms ease-out;
@@ -197,26 +204,27 @@ aside .menu-handler {
     flex-direction: row;
     flex-wrap: wrap;
     position: static;
+    justify-content: space-between;
     padding: 20px 0px;
   }
   body aside .photo {
-    width: 25%;
-    min-width: 80px;
-    position: fixed;
-    left: 0;
+    min-width: 100px;
+    margin-right: 100px;
+  }
+  body aside .photo img {
+    width: 100px;
   }
   body aside .info {
-    width: 25%;
-    margin-left: 20%;
-    text-align: left;
+    width: 150px;
+    margin-left: 100px;
+    text-align: center;
   }
   body aside .navbar {
     width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: center;
     margin-top: 0px;
-    margin-left: 20%;
   }
   body aside .dark-light-slider {
     position: fixed;
@@ -228,75 +236,67 @@ aside .menu-handler {
     width: 100%;
     padding: 30px;
   }
-  body .main .title, body .main .shadow {
+  body .main .page-title, body .main .shadow {
     font-size: 2.2rem;
-  }
-  body .main .arrow-left, body .main .arrow-right {
-    font-size: 5rem;
+    height: 45px;
   }
 }
 @media screen and (max-width: 576px) {
   body aside {
     padding-bottom: 5px;
+    padding-top: 50px;
   }
   body aside .photo {
-    position: static;
-    width: 50%;
+    width: 50px;
+    margin-right: 50px;
   }
   body aside .info {
-    width: 50%;
-    margin-left: 0px;
+    margin-left: 20px;
   }
   body aside .navbar {
     flex-direction: column;
     opacity: 0;
     height: 0px;
+    transform: translateY(-40px);
   }
   body aside .menu-handler {
     display: block;
   }
   body .main {
     position: relative;
+    padding: 10px;
   }
-  body .main .title, body .main .shadow {
+  body .main .page-title, body .main .shadow {
     font-size: 1.5rem;
+    height: 30px;
   }
-  body .main .arrow-left {
-    left: 10px;
+  body .main .tumbnail {
+    padding: 5px 10px 10px 5px;
   }
-  body .main .arrow-right {
-    right: 10px;
-  }
-  body .main .projects-container .project {
-    flex-direction: column;
-    text-align: center;
+  body .main .description {
+    padding: 0px 5px;
   }
 }
 .main .slider-container {
-  position: relative;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
 .main .slider-container .slider-img {
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
   transition: all 1000ms ease-out;
+  cursor: pointer;
+}
+.main .slider-container .slider-img img {
+  width: 100%;
 }
 .main .slider-container .arrow-right, .main .slider-container .arrow-left {
-  position: absolute;
   color: rgb(90, 90, 90);
   font-size: 7rem;
   cursor: pointer;
 }
-.main .slider-container .arrow-right {
-  right: 20px;
-}
-.main .slider-container .arrow-left {
-  left: 20px;
-}
-.main .slider-container h3 {
+.main .slider-container .title {
   padding: 5px;
 }
 .main .slider-container p {
@@ -304,13 +304,134 @@ aside .menu-handler {
 }
 
 .dark .arrow-right, .dark .arrow-left {
-  color: rgb(200, 200, 200);
+  color: rgb(200, 200, 200) !important;
 }
 
-.main .slider-img {
-  height: calc(100vh - 220px);
-  background-image: url("../images/slider/slider-1.png");
+.shape1 {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(201, 127, 215, 0.2);
+  border-radius: 100px;
+  position: fixed;
+  left: -140px;
+  top: -350px;
+  transform: rotate(45deg);
+  backdrop-filter: blur(10px);
+  z-index: -2;
 }
-.main .arrow-right, .main .arrow-left {
-  top: calc(50vh - 220px);
+
+.shape2, .shape3, .shape4, .shape5 {
+  border-radius: 100%;
+  position: fixed;
+  backdrop-filter: blur(10px);
+  z-index: -1;
+}
+
+.shape2 {
+  width: 150px;
+  height: 150px;
+  background-color: rgba(142, 207, 235, 0.2);
+  left: 160px;
+  top: 80px;
+}
+
+.shape3 {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(107, 114, 192, 0.2);
+  left: -185px;
+  top: 190px;
+}
+
+.shape4 {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(173, 236, 215, 0.2);
+  left: 115px;
+  top: 255px;
+}
+
+.shape5 {
+  width: 130px;
+  height: 130px;
+  background-color: rgba(173, 236, 215, 0.2);
+  left: 30px;
+  top: 400px;
+}
+
+@media screen and (max-width: 992px) {
+  .shape1 {
+    width: 375px;
+    height: 375px;
+    border-radius: 75px;
+    left: -105px;
+    top: -262px;
+  }
+  .shape2 {
+    width: 112px;
+    height: 112px;
+    left: 120px;
+    top: 60px;
+  }
+  .shape3 {
+    width: 225px;
+    height: 225px;
+    left: -139px;
+    top: 142px;
+  }
+  .shape4 {
+    width: 37px;
+    height: 37px;
+    left: 86px;
+    top: 191px;
+  }
+  .shape5 {
+    width: 97px;
+    height: 97px;
+    left: 22px;
+    top: 300px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .shape1 {
+    width: 250px;
+    height: 250px;
+    border-radius: 50px;
+    left: -70px;
+    top: -175px;
+  }
+  .shape2 {
+    width: 75px;
+    height: 75px;
+    left: 80px;
+    top: 40px;
+  }
+  .shape3 {
+    width: 150px;
+    height: 150px;
+    left: -90px;
+    top: 85px;
+  }
+  .shape4 {
+    width: 25px;
+    height: 25px;
+    left: 57px;
+    top: 127px;
+  }
+  .shape5 {
+    width: 65px;
+    height: 65px;
+    left: 15px;
+    top: 200px;
+  }
+}
+@media screen and (max-width: 992px) {
+  body .main .arrow-left, body .main .arrow-right {
+    font-size: 5rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  body .main .arrow-left, body .main .arrow-right {
+    display: none;
+  }
 }/*# sourceMappingURL=app.css.map */

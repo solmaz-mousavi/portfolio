@@ -1,10 +1,12 @@
-@import 'base';
+@import 'variables';
 @import 'fonts';
 @import 'layouts';
 @import 'links';
 @import 'aside';
 @import 'responsive';
 @import 'form';
+@import 'shape';
+@import 'modal';
 
 .main{
     i{
@@ -12,16 +14,3 @@
     }
 }
 
-.dark{
-    .comment-container{
-        i, span{
-            color: $color_title_dark;
-        }
-        p{
-            color: $color_light_gray;
-        }
-    }
-    form .error{
-        color: yellow;
-    }
-}

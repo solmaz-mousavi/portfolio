@@ -1,14 +1,16 @@
-@import 'base';
+@import 'variables';
 @import 'fonts';
 @import 'layouts';
 @import 'links';
 @import 'aside';
 @import 'responsive';
 @import 'form';
+@import 'shape';
+@import 'modal';
 
 .main{
     .info{
-        margin-left: 20px;
+        margin-right: 20px;
         a{
             @include reset_links;
             color: $color_dark;
@@ -24,9 +26,6 @@
             }
         }
     }
-    h3{
-        margin-left: 20px;
-    }
 }
 
 .dark .main{
@@ -34,11 +33,12 @@
         a{
             color: $color_light_gray;
         }
-        b, i{
+        i{
             color: $color_title_dark;
         }
     }
-    h3{
+    h4{
         color: $color_light_gray;
     }
 }
+

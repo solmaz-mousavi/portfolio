@@ -1,27 +1,35 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comments</title>
+    <title>نظرات مشتریان</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="../css/comments.css">
 </head>
 <body>
+    <div class="body-style">
+        <div class="shape1"></div>
+        <div class="shape2"></div>
+        <div class="shape3"></div>
+        <div class="shape4"></div>
+        <div class="shape5"></div>
+    </div>
     <aside>
         <div class="photo">
             <img src="../images/153442811.jpg" alt="solmaz mousavi">
         </div>
         <div class="info">
-            <p class="name">Solmaz Mousavi</p>
-            <p class="details">UI, Tehran, Iran</p>
+            <p class="name">سولماز موسوی</p>
+            <p class="details">UI</p>
+            <p class="details">تهران - ایران</p>
         </div>
         <ul class="navbar">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About me</a></li>
-            <li><a href="./porfolio.html">Portfolio</a></li>
-            <li><a href="#" class="active">Comments</a></li>
-            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="../index.html">صفحه اصلی</a></li>
+            <li><a href="./about.html">درباره من</a></li>
+            <li><a href="./porfolio.html">نمونه کارها</a></li>
+            <li><a href="#" class="active">نظرات مشتریان</a></li>
+            <li><a href="./contact.html">اطلاعات تماس</a></li>
         </ul>
 
         <div class="dark-light-slider">
@@ -33,25 +41,30 @@
     </aside>
 
     <section class="main">
-        <p class="title">COMMENTS</P>
-        <p class="shadow">COMMENTS</P>
+        <h1 class="page-title">نظرات مشتریان</h1>
+        <p class="shadow">نظرات مشتریان</P>
 
         <div class="comment-container"></div>
 
-        <form action="#" class="tumbnail" name="comment-form" novalidate>
+        <form action="#" class="tumbnail" name="comment-form" data-modal="کاربر گرامی، نظر شما ثبت گردید. از شما سپاسگذاریم" novalidate>
             <div>
-                <input class="input" name="name" id="name" type="text" placeholder="name" data-validation="isRequired" data-label="name">
+                <input class="input" name="name" id="name" type="text" placeholder="نام" data-validation="isRequired" data-label="نام">
             </div>
-            <textarea class="input" name="message" id="message" rows="5" data-validation="isRequired" data-label="comment" placeholder="your comment"></textarea>
-            <p class="error description"></p>
-            <button type="submit">send</button>
+            <textarea class="input" name="message" id="message" rows="5" data-validation="isRequired" data-label="نظرات" placeholder="نظر خود را در این بخش ثبت کنید."></textarea>
+            <p class="description error"></p>
+            <button type="submit">ارسال</button>
 
         </form>
+        <div class="modal">
+            <!-- <i class="fa-solid fa-close modal-close-btn"></i> -->
+            <p class="modal-description"></p>
+        </div>
 
     </section>
     
     <script src="../js/aside.js"></script>
     <script src="../js/comments.js"></script>
     <script src="../js/form-validation.js"></script>
+    <script src="../js/modal.js"></script>
 </body>
 </html>

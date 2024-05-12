@@ -1,41 +1,47 @@
-@import 'base';
+@import 'variables';
 @import 'fonts';
 @import 'layouts';
 @import 'links';
 @import 'aside';
 @import 'responsive';
+@import 'shape';
 
-.main{
-    width: 80%;
-    .tumbnail{
-        .name{
-            font-family: 'font-info';
-            font-size: $font_size_md;
+.main .tumbnail{
+    p{
+        padding-right: 30px;
+    }
+    ul li{
+        @include reset-lists;
+        color: $color_dark;
+        padding-right: 30px;
+        text-align: justify;
+        img{
+            height: 20px;
+            padding-left: 5px;
+            vertical-align: middle;
         }
+    }
+}
+
+@media screen and (max-width: 992px){
+    body .main .tumbnail{
         p{
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: $font_size_sm;
-            padding-left: 50px;
+            padding-right: 25px;
         }
-
         ul li{
-            @include reset-lists;
-            color: $color_dark;
-            padding-left: 50px;
-            img{
-                height: 20px;
-                padding-right: 5px;
-                vertical-align: middle;
-            }
+            padding-right: 5px;
         }
     }
 }
 
-.dark .main .tumbnail{
-    p, span{
-    color: $color_light_gray;
-    }
-    h3{
-        color: $color_title_dark;
+@media screen and (max-width: 576px){
+    body .main .tumbnail{
+        p{
+            padding-right: 0px;
+        }
+        ul li{
+            padding-right: 0px;
+        }
     }
 }
+

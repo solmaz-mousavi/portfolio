@@ -9,8 +9,8 @@ function commentsHandler(comments){
         const commentElem = document.createElement('div');
         commentElem.className = 'tumbnail';
         commentElem.innerHTML = `
-            <i class="fa-solid fa-circle-user"></i>
-            <span>${comment.name}</span>
+            <i class="fa-solid fa-circle-user title"></i>
+            <span class="title">${comment.name}</span>
             <span class="description">${comment.date}</span>
             <p class="description"> - ${comment.description}</p>
             `

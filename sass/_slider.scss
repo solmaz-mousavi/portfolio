@@ -1,32 +1,37 @@
 .main{
     .slider-container{
-        position: relative;
+        // position: relative;
+        width: 100%;
+        display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
 
         .slider-img{
-            background-repeat: no-repeat;
-            background-size:contain;
-            background-position: center;
+            // background-repeat: no-repeat;
+            // background-size:contain;
+            // background-position: center;
             transition: all 1000ms ease-out;
-            // border-radius: 10px;
+            cursor: pointer;
+            img{
+                width: 100%;
+            }
         }
     
         .arrow-right, .arrow-left{
-            position: absolute;
+            // position: absolute;
             color: $color_gray;
             font-size: 7rem;
             cursor: pointer;
     
         }
         .arrow-right{
-            right: 20px;
+            // left: 20px;
         }
         .arrow-left{
-            left: 20px;
+            // right: 20px;
         }
-        h3{
+        .title{
             padding: 5px;
         }
         p{
@@ -37,6 +42,6 @@
 
 .dark{
         .arrow-right, .arrow-left{
-            color: $color_light_gray;
+            color: $color_light_gray !important;
         }
     }
