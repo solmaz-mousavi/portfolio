@@ -8,10 +8,10 @@
 
 .main{
     .slider-img{
-        height: calc(100vh - 220px);
+        height: calc(100vh - 400px);
         background-image: url("../images/slider/slider-1.png");
     }
     .arrow-right, .arrow-left{
-        top: calc(50vh - 220px);
+        top: calc(50vh - 300px);
     }
 }
