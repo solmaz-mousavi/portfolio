@@ -1,3 +1,4 @@
+// class for form validation on any page
 class FormValidation{
     constructor(form){
         this.__form = form;
@@ -13,9 +14,7 @@ class FormValidation{
     }
 
     validationHandler(){
-        // console.log(inputElems);
         inputElems.forEach((input)=>{
-            console.log(input);
             let datasetValidation = input.dataset.validation.split(" ");
             let datasetLabel = input.dataset.label;
 
@@ -32,6 +31,7 @@ class FormValidation{
         }
     }
 
+    // control the field not to be empty
     isRequired(element, label){
         if(element.value ===""){
             return "فیلد " + label + " نباید خالی باشد. "
@@ -39,6 +39,7 @@ class FormValidation{
         return "";
     }
 
+    // control mobile phone 
     isPhone(element, label){
         const regexCode = /09[0139]\d{8}/;
         if(!regexCode.test(element.value)){
@@ -46,6 +47,8 @@ class FormValidation{
         };
         return ""
     }
+
+    // control email address
     isEmail(element, label){
         const regexCode = /^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1.3}\])|(([a-zA-Z0-9]+\.)+[a-zA-Z]{2,}))$/;
         if(!regexCode.test(element.value)){

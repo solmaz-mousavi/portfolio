@@ -8,13 +8,17 @@
     <link rel="stylesheet" href="../css/comments.css">
 </head>
 <body>
-    <div class="body-style">
-        <div class="shape1"></div>
-        <div class="shape2"></div>
-        <div class="shape3"></div>
-        <div class="shape4"></div>
-        <div class="shape5"></div>
-    </div>
+<!-- background style -->
+<div class="body-style">
+    <div class="shape1"></div>
+    <div class="shape2"></div>
+    <div class="shape3"></div>
+    <div class="shape4"></div>
+    <div class="shape5"></div>
+</div>
+<!-- End background style -->
+
+<!-- aside style -->
     <aside>
         <div class="photo">
             <img src="../images/153442811.jpg" alt="solmaz mousavi">
@@ -39,13 +43,18 @@
             <p>&#10095</p>
         </div>
     </aside>
+<!-- End aside style -->
 
+<!-- main style -->
     <section class="main">
+        <!-- title -->
         <h1 class="page-title">نظرات مشتریان</h1>
         <p class="shadow">نظرات مشتریان</P>
 
+        <!-- comments -->
         <div class="comment-container"></div>
 
+        <!-- form to get comments -->
         <form action="#" class="tumbnail" name="comment-form" data-modal="کاربر گرامی، نظر شما ثبت گردید. از شما سپاسگذاریم" novalidate>
             <div>
                 <input class="input" name="name" id="name" type="text" placeholder="نام" data-validation="isRequired" data-label="نام">
@@ -53,15 +62,16 @@
             <textarea class="input" name="message" id="message" rows="5" data-validation="isRequired" data-label="نظرات" placeholder="نظر خود را در این بخش ثبت کنید."></textarea>
             <p class="description error"></p>
             <button type="submit">ارسال</button>
-
         </form>
+
+        <!-- modal on form submit -->
         <div class="modal">
-            <!-- <i class="fa-solid fa-close modal-close-btn"></i> -->
             <p class="modal-description"></p>
         </div>
 
     </section>
-    
+<!-- End main style -->
+
     <script src="../js/aside.js"></script>
     <script src="../js/comments.js"></script>
     <script src="../js/form-validation.js"></script>

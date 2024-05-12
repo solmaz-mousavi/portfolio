@@ -1,6 +1,6 @@
+// slider styles
 .main{
     .slider-container{
-        // position: relative;
         width: 100%;
         display: flex;
         align-items: center;
@@ -8,9 +8,6 @@
         text-align: center;
 
         .slider-img{
-            // background-repeat: no-repeat;
-            // background-size:contain;
-            // background-position: center;
             transition: all 1000ms ease-out;
             cursor: pointer;
             img{
@@ -19,17 +16,10 @@
         }
     
         .arrow-right, .arrow-left{
-            // position: absolute;
             color: $color_gray;
             font-size: 7rem;
             cursor: pointer;
     
-        }
-        .arrow-right{
-            // left: 20px;
-        }
-        .arrow-left{
-            // right: 20px;
         }
         .title{
             padding: 5px;
@@ -40,6 +30,7 @@
     }
 }
 
+// dark mode styles
 .dark{
         .arrow-right, .arrow-left{
             color: $color_light_gray !important;

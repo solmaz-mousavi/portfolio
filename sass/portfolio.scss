@@ -6,6 +6,7 @@
 @import 'responsive';
 @import 'shape';
 
+// projects page styles
 .main{
     .projects-container{
         .project-tumbnail{
@@ -35,7 +36,7 @@
     }
 }
 
-
+// dark mode styles
 .dark .main .projects-container .project .project-info{
     p{
         color: $color_light_gray;
@@ -45,7 +46,7 @@
     }
 }
 
-
+// responsive styles
 @media screen and (max-width: 992px){
     body .projects-container .project-tumbnail{
         .project-img{

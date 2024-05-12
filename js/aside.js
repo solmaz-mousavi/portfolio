@@ -1,23 +1,22 @@
+// select dom elements and variables
 const darkLightSlider = document.querySelector('.dark-light-slider');
 const slider = document.querySelector('#slider');
 const menuHandler = document.querySelector('.menu-handler');
 const navbar = document.querySelector('.navbar');
 let menuClosed = true;
 let mode = localStorage.getItem('mode') || 'light';
-console.log('avalin bar' + mode);
 
+// function - dark mode handler
 function darkModeHandler(mode){
     if(mode === 'dark'){
         document.body.className = 'dark';
-        console.log("darkkkkkkk");
     } else {
         document.body.className = '';
-        console.log('ligttttttttttttt');
     }
 }
-
 darkModeHandler(mode);
 
+// function - menu switcher in mobile responsive mode
 menuHandler.addEventListener('click', function(){
     if(menuClosed){
         menuHandler.style.transform = 'rotate(270deg)';
@@ -34,9 +33,9 @@ menuHandler.addEventListener('click', function(){
     }
 })
 
+// function - dark-light slider (switcher)
 darkLightSlider.addEventListener('click', function(){
     mode = (mode === 'light') ? 'dark' : 'light';
     localStorage.setItem('mode' , mode);
-    console.log('bere local: ' + mode);
     darkModeHandler(mode);
 })

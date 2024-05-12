@@ -1,5 +1,7 @@
+// select dom elements
 const projectsContainer = document.querySelector('.projects-container');
 
+// function - projects box creator
 function projectsHandler(projects){
     projects.forEach(project => {
 
@@ -39,20 +41,14 @@ function projectsHandler(projects){
         infocontainer.append(descriptionElem, linkElem);
         projectElem.append(imagecontainer, titleContainer, infocontainer);
         projectsContainer.appendChild(projectElem);
-
-
-
-
-
-
     });
 }
 
+// fetch data from json file
 window.addEventListener('load', () => {
     fetch('../json/projects.json', {method:'GET'})
         .then(res => res.json())
         .then(data => {
-            console.log(data.projects);
             let projects = data.projects;
             projectsHandler(projects);
         })

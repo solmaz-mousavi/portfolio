@@ -8,6 +8,7 @@
 @import 'shape';
 @import 'modal';
 
+// contact page styles
 .main{
     .info{
         margin-right: 20px;
@@ -28,6 +29,7 @@
     }
 }
 
+// dark mode styles
 .dark .main{
     .info{
         a{
@@ -41,4 +43,3 @@
         color: $color_light_gray;
     }
 }
-

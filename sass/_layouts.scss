@@ -1,5 +1,4 @@
 // layout mixins
-
 @mixin flex-spacebetween{
     display: flex;
     justify-content: space-between;
@@ -92,7 +91,6 @@ body{
         .page-title{
             color: $color_light;
         }
-        
         .shadow{
             background: linear-gradient( rgba(255, 255, 255, 0), rgba(132, 132, 132, 0.205));
             background-clip: text;
@@ -104,7 +102,6 @@ body{
         .description{
             color: $color_light_gray;
             text-align: justify;
-
         }
     }
 }

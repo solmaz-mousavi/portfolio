@@ -1,9 +1,10 @@
+// select dom elements and variables
 const commentContainer = document.querySelector('.comment-container');
-
 const formElem = document.querySelector('form');
 const errorElem = document.querySelector('.error');
 const inputElems = document.querySelectorAll('.input');
 
+// function - comments creator
 function commentsHandler(comments){
     comments.forEach(comment => {
         const commentElem = document.createElement('div');
@@ -18,11 +19,11 @@ function commentsHandler(comments){
     });
 }
 
+// fetch data from json file
 window.addEventListener('load', () => {
     fetch('../json/comments.json', {method:'GET'})
         .then(res => res.json())
         .then(data => {
-            console.log(data.comments);
             let comments = data.comments;
             commentsHandler(comments);
         })

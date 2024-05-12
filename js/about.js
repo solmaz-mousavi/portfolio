@@ -1,5 +1,7 @@
+// select dom elements
 const skillContainer = document.querySelector('.skills');
 
+// function - creating skills box
 function skillHandler(skills){
     skills.forEach(skill => {
         const skillElem = document.createElement('li');
@@ -21,11 +23,11 @@ function skillHandler(skills){
     });
 }
 
+// fetch data from json file
 window.addEventListener('load', () => {
     fetch('../json/skills.json', {method:'GET'})
         .then(res => res.json())
         .then(data => {
-            console.log(data.skills);
             let skills = data.skills;
             skillHandler(skills);
         })

@@ -7,8 +7,8 @@
 @import 'slider';
 @import 'shape';
 
+// project details page styles
 .main{
-    // text-align: center;
     .page-title, .shadow{
         font-size: 2rem !important;
         height: 45px !important;
@@ -21,112 +21,44 @@
     }
     
     .slider-container{
-        // display: flex;
-
-        .arrow-left{
-            // width: 10%;
-            
-
-        }
         .slider-img{
             img{
                 width: 90%;
                 border-radius: 10px;
                 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
             }
-            
-        }
-        .arrow-right{
-
-        }
-        
-        .description{
-
         }
     }
     .slider-title{
         text-align: center;
-
     }
     
     .project-details{
         display: grid;
-        // flex-wrap: nowrap;
         width: 100%;
-        // overflow: hidden;
-        // align-items: center;
         grid-template-columns: repeat(auto-fit, 200px);
         grid-template-rows: auto;
-        // align-content: center;
         justify-content: center;
-        // align-items: center;
-
-
-        // grid-auto-flow:unset;
-        // margin: 0px auto;
         padding-top: 30px;
-        // margin: auto;
-        // justify-items: center;
-
 
         div{
-            // height: 200px;
-            // overflow: hidden;
-            // padding: 10px;
-            // margin: 10px;
             img{
                 width: 150px;
                 height: 100px;
                 overflow: hidden;
-                
                 border-radius: 5px
-
             }
             p{
                 width: 150px;
-                // height: 50px;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-
             }
         };
-
-
-        
-        // display: flex;
-        // flex-direction: row;
-        // justify-content: center;
-        // gap: 20px;
-        // padding: 20px;
-
-        // .image-container, .description-container{
-        //     display: flex;
-        //     flex-direction: row;
-        //     justify-content: center;
-        //     overflow: hidden;
-        //     // width: ;
-        //     gap: 20px;
-        // }
-        // .image-container{
-        //     align-items: flex-end;
-        //     img{
-        //         width: 120px;
-        //         border-radius: 5px;
-        //         cursor: pointer;
-        //     }
-        // }
-        // .description-container{
-        //     align-items: flex-start;
-        //     p{
-        //         text-align: center;
-        //         width: 120px;
-        //     }
         }
     }
-// }
 
-
+// responsive styles
 @media screen and (max-width: 992px){
     body .main{
         .arrow-left, .arrow-right{
@@ -137,7 +69,6 @@
 
 @media screen and (max-width: 576px){
     body .main{
-
         .arrow-left, .arrow-right{
             display: none;
         }

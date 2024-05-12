@@ -1,7 +1,8 @@
+// select dom elements
 const modalBox = document.querySelector('.modal');
-// const modalCloseBtn = document.querySelector('.modal-close-btn');
 const modalDescription = document.querySelector('.modal-description');
 
+// function - modal handler
 function modalHandler(){
     modalDescription.innerHTML = formElem.dataset.modal;
     modalBox.style.opacity = 1;

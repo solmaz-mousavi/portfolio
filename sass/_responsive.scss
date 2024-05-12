@@ -1,7 +1,8 @@
+// responsive styles - smaller than 992px:
 @media screen and (max-width: 992px){
     body{
         flex-direction: column;
-        // aside responsive 
+// aside responsive code:
         aside{
             width: 100%;
             height: auto;
@@ -28,7 +29,6 @@
                 flex-direction: row;
                 justify-content: center;
                 margin-top: 0px;
-                // margin-left: 20%;
             }
             .dark-light-slider{
                 position: fixed;
@@ -37,7 +37,7 @@
                 margin : 10px 20px;
             }
         }
-        // general:
+// general:
         .main{
             width: 100%;
             padding: 30px;
@@ -45,33 +45,14 @@
                 font-size: 2.2rem;
                 height: 45px;
             }
-
-            
-            
-            // comments page:
-
-            // contact page:
-
-
-            // porfolio page:
-
-            // project detail page:
-
-
-
-
-
-
-
-
-            
         }
     }
 }
 
+// responsive styles - smaller than 576px:
 @media screen and (max-width: 576px){
     body{
-        // aside responsive code:
+// aside responsive code:
         aside{
             padding-bottom: 5px;
             padding-top: 50px;
@@ -90,10 +71,9 @@
             }
             .menu-handler{
                 display: block;
-
             }
         }
-        // general:
+// general:
         .main{
             position: relative;
             padding: 10px;
@@ -106,37 +86,6 @@
             }
             .description{
                 padding: 0px 5px;
-            }
-
-            
-            // about page:
-
-
-            // comments page:
-
-            // contact page:
-
-
-            // porfolio page:
-
-            // project detail page:
-
-
-
-
-
-
-
-
-
-
-
-            
-            .projects-container{
-                .project-tumbnail{
-                    // flex-direction: column;
-                    // text-align: center;
-                }
             }
         }
     }

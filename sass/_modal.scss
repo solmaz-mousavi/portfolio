@@ -1,3 +1,4 @@
+// modal styles
 .modal{
     position: fixed;
     bottom: 20px;
@@ -10,10 +11,6 @@
     background-color: $color_title_dark;
     opacity: 0;
     transition: all 200ms ease-out;
-    // i{
-    //     font-weight: bolder;
-    //     cursor: pointer;
-    // }
     .modal-description{
         padding-right: 20px;
         padding-top: 20px;
