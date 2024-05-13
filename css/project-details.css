@@ -451,6 +451,9 @@ aside .menu-handler {
   justify-content: center;
   padding-top: 30px;
 }
+.main .project-details div {
+  cursor: pointer;
+}
 .main .project-details div img {
   width: 150px;
   height: 100px;
